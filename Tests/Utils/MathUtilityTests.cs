@@ -24,7 +24,7 @@ namespace Tests.Utils
         }
 
         [Theory]
-        [MemberData(nameof(ListOfNextPrimerNumbers))]
+        [MemberData(nameof(ListOfNextPrimeNumbers))]
         public void FindNextPrimeNumber_Returns_NextPrimeNumber_ForKnownNumbers(int number, int nextPrime)
         {
             //Arrange & Act
