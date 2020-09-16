@@ -8,7 +8,7 @@ namespace Tests.Utils
     public class MathUtilityTests
     {
         [Fact]
-        public void IsPrimerNumber_Returns_True_ForKnownPrimeNumbers()
+        public void IsPrimeNumber_Returns_True_ForKnownPrimeNumbers()
         {
             string projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
             var listOfKnownPrimes = File.ReadAllLines($"{projectPath}/Resources/primes-to-100k.txt");
@@ -25,7 +25,7 @@ namespace Tests.Utils
 
         [Theory]
         [MemberData(nameof(ListOfNextPrimerNumbers))]
-        public void FindNextPrimerNumber_Returns_NextPrimerNumber_ForKnownNumbers(int number, int nextPrime)
+        public void FindNextPrimeNumber_Returns_NextPrimeNumber_ForKnownNumbers(int number, int nextPrime)
         {
             //Arrange & Act
             var next = MathUtility.FindNextPrimeNumber(number);
@@ -34,7 +34,7 @@ namespace Tests.Utils
             Assert.True(next == nextPrime);
         }
 
-        public static IEnumerable<object[]> ListOfNextPrimerNumbers =>
+        public static IEnumerable<object[]> ListOfNextPrimeNumbers =>
             new List<object[]>
             {
                 new object[] { 4, 5 },

@@ -19,7 +19,6 @@ namespace Api.Controllers
             _mediator = mediator;
         }
 
-
         /// <summary>
         /// Checks if a give number is prime and returns the next prime
         /// </summary>
